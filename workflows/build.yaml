@@ -24,5 +24,5 @@ jobs:
           GOOGLE_PROJECT: ${{ secrets.GOOGLE_PROJECT }}  # Define environment variable here
         run: |  # Multi-line commands with proper indentation
           gcloud auth configure-docker us-central1-docker.pkg.dev
-          docker build -t us-central1-docker.pkg.dev/travel-europe-llc-main/monkeysolutions/nginx:latest .
-          docker push us-central1-docker.pkg.dev/travel-europe-llc-main/monkeysolutions/nginx:latest
+          docker build -t us-central1-docker.pkg.dev/travel-europe-llc-main/$GOOGLE_PROJECT/nginx:latest .
+          docker push us-central1-docker.pkg.dev/travel-europe-llc-main/$GOOGLE_PROJECT/nginx:latest
