@@ -3,7 +3,7 @@ FROM nginx:alpine
 
 # Copy the website content to the default Nginx directory
 
-WORKDIR /usr/share/nginx/Europe Travel/html
+WORKDIR /usr/share/nginx/"Europe Travel"/html
 COPY . .
 
 # Expose port 80
